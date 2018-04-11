@@ -1,20 +1,37 @@
-<div class="container color-dark">
-  <div class="col">
-    <p>Add d Item</p>
+<div class="container main-container">
+  <div class="scrolling-wrapper" [dragula]='"bag-task1"'>
+    <div class="card" *ngFor="let hero of images">
+      <img id="demo" class="navbar-img-logo" alt="Angular Logo" src="{{ hero }}" (click)="doubleClickImg()" data-toggle="modal"
+        data-target="#myModal">
+    </div>
   </div>
-  <div class="col">
-    <p>My Items ({{itemCount}})</p>
-  </div>
+  <form>
+    <span type="text" name="Max" value="Max">Max images: </span>
+    <span>{{imgCount}}</span>
+    <br>
+    <span>Number of images: </span>
+    <span>{{images.length}}</span>
+  </form>
 </div>
-<div class="container color-light">
-  <div class="col">
-    <p class="sm"> Use this form</p>
-    <form>
-      <input type="text" class="txt" name="item" placeholder=" life goal...">
-      <input type="submit" class="btn" value={{btnText}}>
-    </form>
-  </div>
-  <div class="col">
-    <p class="life-container ">My Item for now</p>
+
+<!-- model -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btnClose" data-dismiss="modal">&times;</button>
+        <h5>הוסף תמונה</h5>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+        <input type="file">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
   </div>
 </div>
