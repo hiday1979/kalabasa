@@ -12,6 +12,8 @@ import { MainPicComponent } from './main-pic/main-pic.component';
 import { DragulaModule } from 'ng2-dragula';
 import { MyServiceService} from './my-service.service';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
